@@ -20,6 +20,7 @@
   "homepage": "https://github.com/AlduLonghi/Node-practice#readme",
   "dependencies": {
     "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0"
   },
   "devDependencies": {
