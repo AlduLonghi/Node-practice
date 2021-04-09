@@ -3,12 +3,12 @@ const router = express.Router();
 
 // All authors route
 router.get('/', (req, res) => {
-    res.render('index')
+    res.render('authors/index')
 })
 
 // New author route
-router.get('/', (req, res) => {
-    res.render('index')
+router.get('/new', (req, res) => {
+    res.render('authors/new')
 });
 
 // Create author route
