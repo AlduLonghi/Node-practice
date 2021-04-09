@@ -1,0 +1,31 @@
+{
+  "name": "Node-practice",
+  "version": "1.0.0",
+  "description": "The aim of this project is to practice Node.js by building a web app.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlduLonghi/Node-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlduLonghi/Node-practice/issues"
+  },
+  "homepage": "https://github.com/AlduLonghi/Node-practice#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
