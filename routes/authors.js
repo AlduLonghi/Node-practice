@@ -15,7 +15,7 @@ router.get('/new', (req, res) => {
 // Create author route
 
 router.post('/', (req, res) => {
-    res.send('Create')
+    res.send(req.body.name);
 });
 
 
