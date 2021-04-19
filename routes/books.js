@@ -25,7 +25,13 @@ router.get('/new', async (req, res) => {
 // Create book route
 
 router.post('/', async (req, res) => {
-   res.send('Create book');
+   const book = new Book({
+      title: req.body.title,
+      author: req.body.author,
+      publishDate: new Date(req.body.publishDate),
+      pageCount: req.body.pageCount,
+      description: req.body.description,
+   });
 });
 
 
