@@ -1,7 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 const Book = require('../models/book');
 const Author = require('../models/auhtor');
+const uploadPath = path.join('public', Book.coverImageBasePath);
+const imageMimeTypes = ['images/jpeg', 'images/png', 'images/gif'];
+const upload = multer({
+   dest: uploadPath,
+   fileFilter: (req, file, callback) => {
+      callback(null, imageMimeTypes.includes(file.mimetype));
+   },
+});
 
 // All books route
 router.get('/', async (req, res) => {
@@ -24,7 +34,7 @@ router.get('/new', async (req, res) => {
 
 // Create book route
 
-router.post('/', async (req, res) => {
+router.post('/', upload.single('cover'), async (req, res) => {
    const book = new Book({
       title: req.body.title,
       author: req.body.author,
