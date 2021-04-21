@@ -1,5 +1,5 @@
 <h2>New book</h2>
-<form action="/books" method="POST">
+<form action="/books" method="POST" enctype="multipart/form-data">
     <%- include('_forms_fields') %>
     <a href="/books">Cancel</a>
     <button type="submit">Create</button>
